@@ -62,7 +62,9 @@ $classes = $eo_event_loop_args['class'];
 						echo "du " . $eventdate;
 					} else {
 						echo __( 'on','eventorganiser' ) . ' ' . $eventdate; 
-					}?>
+					}
+					$lieu = eo_get_venue_name();
+					if ($lieu != '') {?>,&nbsp;<i><?php echo $lieu; ?></i><?php } ?>
 			</li>
 
 		<?php endwhile; ?>
